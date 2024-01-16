@@ -15,5 +15,3 @@ def compare_texts(text1, text2):
     similarity_score = cosine_similarity[0][0].item()
 
     return similarity_score
-
-
