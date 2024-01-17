@@ -25,4 +25,4 @@ jobs:
 
     - name: Запуск тестов
       run: |
-        pytest
+        python test.py
