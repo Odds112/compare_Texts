@@ -3,7 +3,7 @@ import compare as comp
 
 
 def main():
-    st.title("Пример приложения Streamlit")
+    st.title("Сравнение 2-ух текстов на Streamlit")
 
     # Окна для ввода текста
     text_input1 = st.text_area("Введите текст 1:", "")
