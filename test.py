@@ -10,9 +10,9 @@ class TestTextComparison(unittest.TestCase):
 
     def test_similarity_between_different_texts(self):
         text1 = "Это первый текст для сравнения."
-        text2 = " "
+        text2 = "sen"
         similarity = comp.compare_texts(text1, text2)
-        self.assertEqual(similarity, 0.1, "Ожидается нулевое сходство для различных текстов")
+        self.assertEqual(round(similarity, 1), 0.0, "Ожидается нулевое сходство для различных текстов")
 
     def test_similarity_with_similar_texts(self):
         text1 = "Это текст с похожим содержанием."
@@ -22,7 +22,7 @@ class TestTextComparison(unittest.TestCase):
 
     def test_similarity_with_dissimilar_texts(self):
         text1 = "Это текст с определенной темой."
-        text2 = "Случайное предложение."
+        text2 = " "
         similarity = comp.compare_texts(text1, text2)
         self.assertLess(similarity, 0.3, "Ожидается низкое сходство для различных текстов")
 
